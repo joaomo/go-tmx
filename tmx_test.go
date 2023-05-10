@@ -7,7 +7,7 @@ import (
 
 func TestTmxRead(t *testing.T) {
 	path := "test-data/example-document.tmx"
-	tmx, err := Read(path)
+	tmx, _, err := Read(path)
 	if err != nil {
 		t.Errorf("Expected to be able to read file at %v, got %v", path, err)
 	}
@@ -16,7 +16,7 @@ func TestTmxRead(t *testing.T) {
 
 func TestTranslation(t *testing.T) {
 	path := "test-data/example-document.tmx"
-	tmx, err := Read(path)
+	tmx, _, err := Read(path)
 	if err != nil {
 		t.Error(err)
 	}
